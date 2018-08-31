@@ -9725,7 +9725,10 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
 /*==================================================*/
 /*==================================================*/
 /*==================================================*/
-
+.well {
+  border-color: #a3a375;
+  border-width: 1.5px;
+}
 
 .container {
   padding-top: 20px;
@@ -9733,7 +9736,6 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
   font-size: 24px;
 }
 
-.well {
-  border-color: #FF0000;
-  border-width: 5px;
+.card {
+ margin: auto;
 }
