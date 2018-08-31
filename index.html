@@ -3,35 +3,46 @@
 <head>
 	<title>World Cities Hangman</title>
 
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- CSS Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style-boot.css">
+
+	<!-- Meta Tag Description -->
+  	<meta name="description" content="Play this awesome Hangman game on your mobile device!">
+
+	<!-- Mobile Viewport -->
+  	<meta name="viewport" content="width=device-width, maximum-scale=1.0">
 </head>
 
-<body background="assets/images/world-icons.jpg">
+<body>
 
-	<div id="header">
-	 	<h1>World Cities Hangman</h1>
-	 	<div id="start-play"><h4>Press any letter to start playing!</h4></div>
-	</div>
+	<div class="container">
 
-	<div id="home-world-city"><h3>What's the City?</h3>
-	<div id="city"></div>
-	<div id="news"></div>
-	<div id="picture"></div>
-	</div>
+		<div id="header">
+		 	<h1>World Cities Hangman</h1>
+		 	<div id="start-play"><h4>Press any letter to start playing!</h4></div>
+		</div>
 
-	<div id="home-number-guesses">	
-		<h4>Wrong Guesses Left:</h4>
-		<div id="guesses"></div>
-	</div>
+		<div id="home-world-city"><h3>What's the City?</h3>
+		<div id="city"></div>
+		<div id="news"></div>
+		<div id="picture"></div>
+		</div>
 
-	<div id="home-letters-guessed">	
-		<h4>Letters Already Guessed:</h4>
-		<div id="letters-guessed"></div>
-	</div>
+		<div id="home-number-guesses">	
+			<h4>Wrong Guesses Left:</h4>
+			<div id="guesses"></div>
+		</div>
 
-	<div id="home-score">	
-		Wins:<div id="wins"></div>
-		Losses:<div id="losses"></div>
+		<div id="home-letters-guessed">	
+			<h4>Letters Already Guessed:</h4>
+			<div id="letters-guessed"></div>
+		</div>
+
+		<div id="home-score">	
+			Wins:<div id="wins"></div>
+			Losses:<div id="losses"></div>
+		</div>
+
 	</div>
 
 <script type="text/javascript" src="assets/javascript/game.js"></script>
