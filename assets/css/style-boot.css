@@ -9736,6 +9736,31 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
   font-size: 24px;
 }
 
-.card {
- margin: auto;
+.home-score {
+  padding-top: 30%;
+}
+
+.bg-primary {
+  width: 30%;
+  margin: auto;
+}
+
+.bg-info {
+  width: 30%;
+  margin: auto;
+}
+
+.bg-warning {
+  width: 30%;
+  margin: auto;
+}
+
+.bg-success {
+  width: 10%;
+  margin-left: 40%;
+}
+
+.bg-danger {
+  width: 10%;
+  margin-left: 5px;
 }
