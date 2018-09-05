@@ -4,7 +4,7 @@
 	<title>World Cities Hangman</title>
 
 	<!-- CSS Stylesheet -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style-boot.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 	<!-- Meta Tag Description -->
   	<meta name="description" content="Play this awesome Hangman game on your mobile device!">
@@ -15,51 +15,93 @@
 
 <body>
 
-	<div class="container well">
+	<div class="container" id="well">
 
 		<div id="header">
 		 	<h1>World Cities Hangman</h1>
 		 	<div id="start-play"><h4>Press any letter to start playing!</h4></div>
 		</div>
 
-		<div class="card text-white bg-primary mb-3">
-
-		<div id="home-world-city"><h3>What's the City?</h3>
-		<div id="city"></div>
-		<div id="news"></div>
-		<div id="picture"></div>
-		</div>
-
-		</div>
-
-		<div id="home-number-guesses">	
-			<div class="card text-white bg-info mb-3">
-			<h4>Wrong Guesses Left:</h4>
-			<div id="guesses"></div>
+		
+		<div id="home-world-city">
+			<div class="card text-white bg-primary mb-3">
+				<h3>What's the City?</h3>
+				<div id="city"></div>
+				<div id="news"></div>
+				<div id="picture"></div>
 			</div>
 		</div>
 
-		<div id="home-letters-guessed">	
-			<div class="card text-white bg-warning mb-3">
-			<h4>Letters Already Guessed:</h4>
-			<div id="letters-guessed"></div>
+		<div id="guesses-home" class="row">
+			<div id="home-letters-guessed" class="card text-white bg-info mb-3">
+				<h4>Letters Already Used:</h4>
+				<div id="letters-guessed"></div>
+			</div>
+		
+
+			<div id="home-number-guesses" class="card text-white bg-secondary mb-3">
+				<h4>Guesses:</h4>
+				<div id="guesses"></div>
 			</div>
 		</div>
+
+		<div id="keyboard">
+
+			<div id="first-row">
+				<button type="button" class="btn btn-outline-primary">A</button>
+				<button type="button" class="btn btn-outline-primary">B</button>
+				<button type="button" class="btn btn-outline-primary">C</button>
+				<button type="button" class="btn btn-outline-primary">D</button>
+				<button type="button" class="btn btn-outline-primary">E</button>
+				<button type="button" class="btn btn-outline-primary">F</button>
+			</div>
+
+
+			<div id="second-row">
+				<button type="button" class="btn btn-outline-primary">G</button>
+				<button type="button" class="btn btn-outline-primary">H</button>
+				<button type="button" class="btn btn-outline-primary">I</button>
+				<button type="button" class="btn btn-outline-primary">J</button>
+				<button type="button" class="btn btn-outline-primary">K</button>
+				<button type="button" class="btn btn-outline-primary">L</button>
+			</div>
+
+			<div id="third-row">
+				<button type="button" class="btn btn-outline-primary">M</button>
+				<button type="button" class="btn btn-outline-primary">N</button>
+				<button type="button" class="btn btn-outline-primary">O</button>
+				<button type="button" class="btn btn-outline-primary">P</button>
+				<button type="button" class="btn btn-outline-primary">Q</button>
+				<button type="button" class="btn btn-outline-primary">R</button>
+			</div>
+
+			<div id="fourth-row">
+				<button type="button" class="btn btn-outline-primary">S</button>
+				<button type="button" class="btn btn-outline-primary">T</button>
+				<button type="button" class="btn btn-outline-primary">U</button>
+				<button type="button" class="btn btn-outline-primary">W</button>
+				<button type="button" class="btn btn-outline-primary">Y</button>
+				<button type="button" class="btn btn-outline-primary">X</button>
+				<button type="button" class="btn btn-outline-primary">Z</button>
+			</div>
+
+		</div>
+
+
 
 		<div id="home-score" class="row">
-
-			<div class="card text-white bg-success mb-3">	
-			<h4 class="card-title">Wins:<div id="wins"></div></h4>
+			<div class="card text-white bg-success mb-3">
+				<h4 class="card-title">Wins:<div id="wins"></div></h4>
 			</div>
 
-			<div class="card text-white bg-danger mb-3">	
-			<h4 class="card-title">Losses:<div id="losses"></div></h4>
-			</div>
-			
+			<div class="card text-white bg-danger mb-3">	<h4 class="card-title">Losses:<div id="losses"></div></h4>
+			</div>			
 		</div>
 
 	</div>
 
 <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </body>
+
 </html>
