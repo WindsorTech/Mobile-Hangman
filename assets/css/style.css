@@ -9737,6 +9737,11 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
   border-width: 1.5px;
 }
 
+#city{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 .btn {
   border-width: 2.5px;
   width: 65px;

@@ -89,7 +89,7 @@ function displayCity () {
 				wordView += cityLetters[i];			
 			} else {
 				// if not, print the dashes to be filled in
-				wordView += '&nbsp;_&nbsp;';
+				wordView += '&nbsp;*&nbsp;';
 			}
 	}
 
@@ -177,7 +177,7 @@ function displayUpdate () {
 				wordView += cityLetters[i];			
 			} else {
 				// if not, print the dashes to be filled in
-				wordView += '&nbsp;_&nbsp;';
+				wordView += '&nbsp;*&nbsp;';
 			}
 		}
 
