@@ -9742,6 +9742,14 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
   font-weight: bold;
 }
 
+#guesses {
+    font-weight: bold;
+}
+
+#letters-guessed {
+    font-weight: bold;
+}
+
 .btn {
   border-width: 2px;
   width: 65px;
