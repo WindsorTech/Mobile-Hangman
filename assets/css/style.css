@@ -9743,10 +9743,11 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
 }
 
 .btn {
-  border-width: 2.5px;
+  border-width: 2px;
   width: 65px;
   height: 50px;
   font-weight: bold;
+  margin-bottom: 2px;
 }
 
 #home-score {
@@ -9782,11 +9783,19 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
 
 
 
+@media only screen and (max-width: 480px) {
 
-@media only screen and (max-width: 480px) {}
+.container {
+    width: 95%
+}
+
+}
 
 
 @media only screen and (min-width: 481px) and (max-width: 853px) {
 
+.container {
+    width: 95%
+}
 
 }
