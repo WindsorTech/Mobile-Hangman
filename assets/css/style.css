@@ -9797,6 +9797,26 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
     width: 95%
 }
 
+.bg-primary {
+  width: 100%
+}
+
+.bg-info {
+  width: 100%
+}
+
+.bg-secondary {
+  width: 100%
+}
+
+.bg-success {
+  width: 100%
+}
+
+.bg-danger {
+  width: 100%
+}
+
 }
 
 
@@ -9805,5 +9825,27 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
 .container {
     width: 95%
 }
+
+.bg-primary {
+  width: 100%
+}
+
+.bg-info {
+  width: 100%
+}
+
+.bg-secondary {
+  width: 100%
+}
+
+.bg-success {
+  width: 100%
+}
+
+.bg-danger {
+  width: 100%
+}
+
+
 
 }
