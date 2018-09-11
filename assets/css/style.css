@@ -9750,12 +9750,17 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
     font-weight: bold;
 }
 
-.btn {
+.letter-button {
   border-width: 2px;
-  width: 65px;
+  width: 52px;
   height: 50px;
-  font-weight: bold;
   margin-bottom: 2px;
+  background-color: #FFFF;
+  border-color: #4582EC;
+  font-weight: bold;
+  color: #4582EC;
+  border-radius: 100px;
+
 }
 
 #home-score {
