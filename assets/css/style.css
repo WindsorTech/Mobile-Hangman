@@ -9820,12 +9820,11 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
 }
 
 .bg-success {
-  width: 30%
-  margin-left: -10%;
+  width: 27%
 }
 
 .bg-danger {
-  width: 30%
+  width: 27%
 }
 
 .btn-outline-primary {
