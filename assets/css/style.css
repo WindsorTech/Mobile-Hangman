@@ -9827,7 +9827,7 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
   width: 100%
 }
 
-#first-row {
+.btn-outline-primary {
   width: 50%;
 }
 
