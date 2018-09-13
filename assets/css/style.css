@@ -9747,6 +9747,14 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
   margin: auto;
 }
 
+#letters-guessed {
+    font-weight: bold;
+}
+
+.bg-info {
+  width: 29%;
+}
+
 #guesses {
     font-weight: bold;
 }
@@ -9756,17 +9764,8 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
   margin-left: 5px;
 }
 
-#letters-guessed {
-    font-weight: bold;
-}
-
-.bg-info {
-  width: 29%;
-  margin-left: 30.5%;
-}
-
 #home-score {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .bg-success {
