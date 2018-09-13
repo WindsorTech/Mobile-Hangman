@@ -9789,11 +9789,11 @@ table-primary, table-secondary, table-success, table-info, table-warning, table-
 @media only screen and (max-width: 480px) {
 
 .container {
-    width: 95%
+    width: 99%
 }
 
 .bg-primary {
-  width: 110%
+  width: 100%
 }
 
 .bg-info {
