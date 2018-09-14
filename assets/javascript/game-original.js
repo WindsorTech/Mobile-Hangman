@@ -201,6 +201,9 @@ function youWin () {
 	// Update the Wins score on the page
 	document.querySelector("#wins").innerHTML = wins;
 
+	// print Play Again Title
+	document.querySelector("#start-play").innerHTML = "<h4>Press any key to play again!</h4>";
+
 	// on a press of a button, restart the game
 	document.onkeyup = function(event) {
 		restartGame();
@@ -219,6 +222,9 @@ function youLose() {
 
 	// Update the Loss score on the page
 	document.querySelector("#losses").innerHTML = losses;
+
+	// print Play Again Title
+	document.querySelector("#start-play").innerHTML = "<h4>Press any key to play again!</h4>";
 
 	// on a press of a button, restart the game
 	document.onkeyup = function(event) {
