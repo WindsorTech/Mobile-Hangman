@@ -64,13 +64,13 @@ document.onkeyup = function(event) {
 	cityLetters = cityInPlay.split('');
 	
 	// print the Wrong Guesses Left current no. to page
-	document.querySelector('#guesses').innerHTML = guessesLeft;
+	$('#guesses').html(guessesLeft);
 
 	// print number of wins
-	document.querySelector('#wins').innerHTML = wins;
+	$('#wins').html(wins);
 
 	// print number of losses
-	document.querySelector('#losses').innerHTML = losses;
+	$('#losses').html(losses);
 
 	// call the displayCity function to move the game on
 	displayCity();
@@ -94,7 +94,7 @@ function displayCity () {
 	}
 
 	// print the vordView string variable to the page
-	document.querySelector('#city').innerHTML = wordView;
+	$('#city').html(wordView);
 
 }
 
@@ -113,10 +113,10 @@ function wrongUpdate () {
 		guessedLetters.push(letterGuessed);
 
 		// print the updated no. of guesses left to page
-		document.querySelector('#guesses').innerHTML = guessesLeft;
+		$('#guesses').html(guessesLeft);
 
 		// print the already guessed letter to page
-		document.querySelector("#letters-guessed").innerHTML = guessedLetters.join(' - ').toUpperCase();
+		$('#letters-guessed').html(guessedLetters.join(' - ').toUpperCase());
 	}
 
 
