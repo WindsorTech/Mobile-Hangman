@@ -193,13 +193,13 @@ function youWin () {
 	wins++;
 
 	// print the "YOU WIN" phrase to the page
-	document.querySelector("#news").innerHTML = "<h3><font color='blue'>YOU WIN!</font></h3>";
+	$('#news').html("<h3><font color='blue'>YOU WIN!</font></h3>");
 
 	// print the city image to the page
-	document.querySelector('#picture').innerHTML = '<img src="assets/images/' + cityInPlay + '.jpg" width="340" height="190">';
+	$('#picture').html('<img src="assets/images/' + cityInPlay + '.jpg" width="340" height="190">');
 
 	// Update the Wins score on the page
-	document.querySelector("#wins").innerHTML = wins;
+	$('#wins').html(wins);
 
 	// on a press of a button, restart the game
 	document.onkeyup = function(event) {
@@ -215,10 +215,10 @@ function youLose() {
 	losses++;
 
 	// print the "YOU LOSE" phrase to the page
-	document.querySelector("#news").innerHTML = "<h3><font color='red'>YOU LOSE!<p>TRY AGAIN</font></h3>";
+	$('#news').html("<h3><font color='red'>YOU LOSE!<p>TRY AGAIN</font></h3>");
 
 	// Update the Loss score on the page
-	document.querySelector("#losses").innerHTML = losses;
+	$('#losses').html(losses);
 
 	// on a press of a button, restart the game
 	document.onkeyup = function(event) {
@@ -241,26 +241,23 @@ function restartGame() {
 	wins = wins;
 	losses = losses;
 
-	// reset the already guessed letters section
-	document.querySelector("#letters-guessed").innerHTML = guessedLetters.join(' - ').toUpperCase();
+	// reset the already guessed letters sectio
+	$('#letters-guessed').html(guessedLetters.join(' - ').toUpperCase());
 
 	// reset the Wrong Guesses Left section
-	document.querySelector('#guesses').innerHTML = guessesLeft;
+	$('#guesses').html(guessesLeft);
 
 	// print the current number of wins
-	document.querySelector('#wins').innerHTML = wins;
+	$('#wins').html(wins);
 
 	// print current number of losses
-	document.querySelector('#losses').innerHTML = losses;
+	$('#losses').html(losses);
 
 	// reset the News div
-	document.querySelector("#news").innerHTML = "";
+	$('#news').html("");
 
 	// reset the Picture div
-	document.querySelector('#picture').innerHTML = "";
-
-	// print the Play Again title to page
-	document.querySelector("#start-play").innerHTML = "<h4>Press any letter to start playing!</h4>";
+	$('#picture').html("");
 	
 	// call function to Setup Game
 	setupGame();
