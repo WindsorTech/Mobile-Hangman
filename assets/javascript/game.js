@@ -34,13 +34,69 @@ var losses = 0;
 // Set Up and start game
 function setupGame() {
 
-// Register keyboard input from user
-document.onkeyup = function(event) {
+	// Randomly choose 1 city from the cities array 
+	// and store it in the cityInPlay variable
+	cityInPlay = cities[Math.floor(Math.random() * cities.length)];
 
-	// register key pressed by user 
-	// and store it in the letterGuessed variable
-	letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+	console.log(cityInPlay);
+	
+	// Split the letters from chosen city
+	// and store in in the cityLetters Array
+	cityLetters = cityInPlay.split('');
 
+	console.log(cityLetters);
+	
+	// print the Wrong Guesses Left current no. to page
+	$('#guesses').html(guessesLeft);
+
+	// print number of wins
+	$('#wins').html(wins);
+
+	// print number of losses
+	$('#losses').html(losses);
+
+
+	// click KEYBOARD buttons
+	$('.btn-outline-primary').click(function () {
+
+	    if (this.id == 'btn-a') {
+	        letterGuessed = "a";
+	        callLetter();
+	    	} else if (this.id == 'btn-b') {        
+	        letterGuessed = "b";
+	        callLetter();
+	    	} else if (this.id == 'btn-c') {        
+	        letterGuessed = "c";
+	        callLetter();
+	    	} else if (this.id == 'btn-d') {        
+	        letterGuessed = "d";
+	        callLetter();
+	    	} else if (this.id == 'btn-e') {        
+	        letterGuessed = "e";
+	        callLetter();
+	    	} else if (this.id == 'btn-f') {        
+	        letterGuessed = "f";
+	        callLetter();
+	    	} else if (this.id == 'btn-g') {        
+	        letterGuessed = "g";
+	        callLetter();
+	    	} else if (this.id == 'btn-h') {        
+	        letterGuessed = "h";
+	        callLetter();
+	    	} else if (this.id == 'btn-i') {        
+	        letterGuessed = "i";
+	        callLetter();
+	    	}
+
+    	
+	});
+
+	// call the displayCity function to move the game on
+	displayCity();
+
+}
+
+function callLetter () { 
 	// if the letter guessed by user is right
 	// and NOT already in the matched letters array
 	if ((cityLetters.indexOf(letterGuessed) != -1) && (matchedLetters.indexOf(letterGuessed) == -1)){ 
@@ -55,27 +111,9 @@ document.onkeyup = function(event) {
 	}
 
 }
-	// Randomly choose 1 city from the cities array 
-	// and store it in the cityInPlay variable
-	cityInPlay = cities[Math.floor(Math.random() * cities.length)];
-	
-	// Split the letters from chosen city
-	// and store in in the cityLetters Array
-	cityLetters = cityInPlay.split('');
-	
-	// print the Wrong Guesses Left current no. to page
-	$('#guesses').html(guessesLeft);
 
-	// print number of wins
-	$('#wins').html(wins);
 
-	// print number of losses
-	$('#losses').html(losses);
 
-	// call the displayCity function to move the game on
-	displayCity();
-
-}
 
 // Display random city on page with dashes to be filled in
 function displayCity () {
