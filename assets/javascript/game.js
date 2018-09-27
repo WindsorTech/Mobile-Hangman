@@ -56,6 +56,11 @@ function setupGame() {
 	$('#losses').html(losses);
 
 
+	// HIDE #KEYBOARD
+	// SHOW START BUTTON
+	// INSERT CLICK ON START BUTTON TO CALL FUNC BELOW
+
+	// SHOW #KEYBOARD
 	// click KEYBOARD buttons
 	$('.btn-outline-primary').click(function () {
 
@@ -85,6 +90,57 @@ function setupGame() {
 	        callLetter();
 	    	} else if (this.id == 'btn-i') {        
 	        letterGuessed = "i";
+	        callLetter();
+	    	} else if (this.id == 'btn-j') {        
+	        letterGuessed = "j";
+	        callLetter();
+	    	} else if (this.id == 'btn-k') {        
+	        letterGuessed = "k";
+	        callLetter();
+	    	} else if (this.id == 'btn-l') {        
+	        letterGuessed = "l";
+	        callLetter();
+	    	} else if (this.id == 'btn-m') {        
+	        letterGuessed = "m";
+	        callLetter();
+	    	} else if (this.id == 'btn-n') {        
+	        letterGuessed = "n";
+	        callLetter();
+	    	} else if (this.id == 'btn-o') {        
+	        letterGuessed = "o";
+	        callLetter();
+	    	} else if (this.id == 'btn-p') {        
+	        letterGuessed = "p";
+	        callLetter();
+	    	} else if (this.id == 'btn-q') {        
+	        letterGuessed = "q";
+	        callLetter();
+	    	} else if (this.id == 'btn-r') {        
+	        letterGuessed = "r";
+	        callLetter();
+	    	} else if (this.id == 'btn-s') {        
+	        letterGuessed = "s";
+	        callLetter();
+	    	} else if (this.id == 'btn-t') {        
+	        letterGuessed = "t";
+	        callLetter();
+	    	} else if (this.id == 'btn-u') {        
+	        letterGuessed = "u";
+	        callLetter();
+	    	} else if (this.id == 'btn-v') {        
+	        letterGuessed = "v";
+	        callLetter();
+	    	} else if (this.id == 'btn-w') {        
+	        letterGuessed = "w";
+	        callLetter();
+	    	} else if (this.id == 'btn-x') {        
+	        letterGuessed = "x";
+	        callLetter();
+	    	} else if (this.id == 'btn-y') {        
+	        letterGuessed = "y";
+	        callLetter();
+	    	} else if (this.id == 'btn-z') {        
+	        letterGuessed = "z";
 	        callLetter();
 	    	}
 
@@ -220,7 +276,7 @@ function displayUpdate () {
 		}
 
 		// print the updated wordView string to the page
-		document.querySelector("#city").innerHTML = wordView;
+		$('#city').html(wordView);
 
 }
 
