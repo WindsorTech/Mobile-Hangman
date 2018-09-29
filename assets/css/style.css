@@ -4,6 +4,10 @@
   font-size: 24px;
 }
 
+.windsortech {
+  color: #808080;
+}
+
 #well {
   border-color: #a3a375;
   border-width: 1.5px;
@@ -11,6 +15,18 @@
 
 #city{
   text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-lg {
+  width: 20%;
+  font-size: 30px;
+  color: white;
+  display: block;
+  margin: auto;
+}
+
+.playnow-title {
   font-weight: bold;
 }
 
