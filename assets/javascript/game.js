@@ -296,6 +296,9 @@ function youWin () {
 	// increase the Wins score by one
 	wins++;
 
+	// Hide Keyboard
+	$('#keyboard').hide();
+
 	// print the "YOU WIN" phrase to the page
 	$('#news').html("<h3><font color='blue'>YOU WIN!</font></h3>");
 
@@ -305,10 +308,19 @@ function youWin () {
 	// Update the Wins score on the page
 	$('#wins').html(wins);
 
-	// on a press of a button, restart the game
-	document.onkeyup = function(event) {
+	$("#start-button").show();	
+	$(".playnow-title").html("");
+	$(".btn-start").html("Play Again");	
+	$(".btn-start").addClass("btn-warning");	
+
+	$(".btn-start").click(function(){
 		restartGame();
-	}
+	});
+
+	// on a press of a button, restart the game
+	// document.onkeyup = function(event) {
+	// 	restartGame();
+	// }
 
 }
 
@@ -318,16 +330,23 @@ function youLose() {
 	// increase the Loss score by one
 	losses++;
 
+	// Hide Keyboard
+	$('#keyboard').hide();
+
 	// print the "YOU LOSE" phrase to the page
 	$('#news').html("<h3><font color='red'>YOU LOSE!<p>TRY AGAIN</font></h3>");
 
 	// Update the Loss score on the page
 	$('#losses').html(losses);
 
-	// on a press of a button, restart the game
-	document.onkeyup = function(event) {
+	$("#start-button").show();	
+	$(".playnow-title").html("");
+	$(".btn-start").html("Play Again");	
+	$(".btn-start").addClass("btn-warning");	
+
+	$(".btn-start").click(function(){
 		restartGame();
-	}
+	});
 
 }
 
