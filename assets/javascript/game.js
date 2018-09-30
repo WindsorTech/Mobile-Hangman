@@ -30,6 +30,16 @@ var wins = 0;
 // Number of games the user lost
 var losses = 0;
 
+$('#keyboard').hide();
+$('#home-score').hide();
+
+// Start Screen Button
+$(".btn-start").click(function(){
+	$('#keyboard').show();
+	$('#home-score').show();
+	$('#start-button').hide();	
+});
+
 
 // Set Up and start game
 function setupGame() {

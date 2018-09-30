@@ -18,9 +18,10 @@
   font-weight: bold;
 }
 
-.btn-lg {
-  width: 20%;
+.btn-start {
+  width: 40%;
   font-size: 30px;
+  font-weight: bold;
   color: white;
   display: block;
   margin: auto;
