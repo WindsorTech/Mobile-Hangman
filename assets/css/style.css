@@ -23,7 +23,7 @@
   margin-bottom: 2%;
 }
 
-.btn-start {
+.btn-success, .btn-warning {
   width: 30%;
   height: 75px;
   font-size: 30px;
@@ -109,7 +109,7 @@
   width: 27%
 }
 
-.btn-start { 
+.btn-start, .btn-warning { 
   width: 80%;
 }
 

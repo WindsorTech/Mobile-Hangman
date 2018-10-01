@@ -32,6 +32,7 @@ var losses = 0;
 
 $('#keyboard').hide();
 $('#home-score').hide();
+$(".btn-restart").hide();
 
 // Start Screen Button
 $(".btn-start").click(function(){
@@ -65,12 +66,6 @@ function setupGame() {
 	// print number of losses
 	$('#losses').html(losses);
 
-
-	// HIDE #KEYBOARD
-	// SHOW START BUTTON
-	// INSERT CLICK ON START BUTTON TO CALL FUNC BELOW
-
-	// SHOW #KEYBOARD
 	// click KEYBOARD buttons
 	$('.btn-outline-primary').click(function () {
 
@@ -177,8 +172,6 @@ function callLetter () {
 	}
 
 }
-
-
 
 
 // Display random city on page with dashes to be filled in
@@ -296,24 +289,27 @@ function youWin () {
 	// increase the Wins score by one
 	wins++;
 
+	// Update the Wins score on the page
+	$('#wins').html(wins);
+
 	// Hide Keyboard
 	$('#keyboard').hide();
 
 	// print the "YOU WIN" phrase to the page
-	$('#news').html("<h3><font color='blue'>YOU WIN!</font></h3>");
+	$('#news').html("<h3><font color='blue'>CONGRATS, YOU WIN!</font></h3>");
 
 	// print the city image to the page
 	$('#picture').html('<img src="assets/images/' + cityInPlay + '.jpg" width="340" height="190">');
 
-	// Update the Wins score on the page
-	$('#wins').html(wins);
+	// Show Restart Button 
+	// $("#start-button").show();	
+	// $(".playnow-title").html("");
+	// $(".btn-start").html("Play Again");	
+	// $(".btn-start").addClass("btn-warning");	
+	
+	$(".btn-restart").show();
 
-	$("#start-button").show();	
-	$(".playnow-title").html("");
-	$(".btn-start").html("Play Again");	
-	$(".btn-start").addClass("btn-warning");	
-
-	$(".btn-start").click(function(){
+	$(".btn-restart").click(function(){
 		restartGame();
 	});
 
@@ -330,23 +326,20 @@ function youLose() {
 	// increase the Loss score by one
 	losses++;
 
+	// Update the Loss score on the page
+	$('#losses').html(losses);
+
 	// Hide Keyboard
 	$('#keyboard').hide();
 
 	// print the "YOU LOSE" phrase to the page
-	$('#news').html("<h3><font color='red'>YOU LOSE!<p>TRY AGAIN</font></h3>");
+	$('#news').html("<h3><font color='red'>YOU LOSE, TRY AGAIN!</font></h3>");
 
-	// Update the Loss score on the page
-	$('#losses').html(losses);
+	$(".btn-restart").show();
 
-	$("#start-button").show();	
-	$(".playnow-title").html("");
-	$(".btn-start").html("Play Again");	
-	$(".btn-start").addClass("btn-warning");	
-
-	$(".btn-start").click(function(){
+	$(".btn-restart").click(function(){
 		restartGame();
-	});
+	});	
 
 }
 
@@ -363,6 +356,9 @@ function restartGame() {
 	letterGuessed = null;
 	wins = wins;
 	losses = losses;
+
+	$(".btn-restart").hide();
+	$("#keyboard").show();
 
 	// reset the already guessed letters sectio
 	$('#letters-guessed').html(guessedLetters.join(' - ').toUpperCase());
