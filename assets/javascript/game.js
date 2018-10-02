@@ -384,6 +384,7 @@ function restartGame() {
 	losses = losses;
 
 	$(".btn-restart").hide();
+	$('#keyboard').show();
 	$(".btn-outline-primary").show();
 	$('#guesses-home').show();
 
