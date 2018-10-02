@@ -72,84 +72,108 @@ function setupGame() {
 	    if (this.id == 'btn-a') {
 	        letterGuessed = "a";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-b') {        
 	        letterGuessed = "b";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-c') {        
 	        letterGuessed = "c";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-d') {        
 	        letterGuessed = "d";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-e') {        
 	        letterGuessed = "e";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-f') {        
 	        letterGuessed = "f";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-g') {        
 	        letterGuessed = "g";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-h') {        
 	        letterGuessed = "h";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-i') {        
 	        letterGuessed = "i";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-j') {        
 	        letterGuessed = "j";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-k') {        
 	        letterGuessed = "k";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-l') {        
 	        letterGuessed = "l";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-m') {        
 	        letterGuessed = "m";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-n') {        
 	        letterGuessed = "n";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-o') {        
 	        letterGuessed = "o";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-p') {        
 	        letterGuessed = "p";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-q') {        
 	        letterGuessed = "q";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-r') {        
 	        letterGuessed = "r";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-s') {        
 	        letterGuessed = "s";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-t') {        
 	        letterGuessed = "t";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-u') {        
 	        letterGuessed = "u";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-v') {        
 	        letterGuessed = "v";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-w') {        
 	        letterGuessed = "w";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-x') {        
 	        letterGuessed = "x";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-y') {        
 	        letterGuessed = "y";
 	        callLetter();
+	        $(this).hide();
 	    	} else if (this.id == 'btn-z') {        
 	        letterGuessed = "z";
 	        callLetter();
-	    	}
-
-    	
+	        $(this).hide();
+	    	}   	
 	});
 
 	// call the displayCity function to move the game on
@@ -294,6 +318,7 @@ function youWin () {
 
 	// Hide Keyboard
 	$('#keyboard').hide();
+	$('#guesses-home').hide();
 
 	// print the "YOU WIN" phrase to the page
 	$('#news').html("<h3><font color='blue'>CONGRATS, YOU WIN!</font></h3>");
@@ -331,6 +356,7 @@ function youLose() {
 
 	// Hide Keyboard
 	$('#keyboard').hide();
+	$('#guesses-home').hide();
 
 	// print the "YOU LOSE" phrase to the page
 	$('#news').html("<h3><font color='red'>YOU LOSE, TRY AGAIN!</font></h3>");
@@ -367,10 +393,10 @@ function restartGame() {
 	$('#guesses').html(guessesLeft);
 
 	// print the current number of wins
-	$('#wins').html(wins);
+	// $('#wins').html(wins);
 
-	// print current number of losses
-	$('#losses').html(losses);
+	// // print current number of losses
+	// $('#losses').html(losses);
 
 	// reset the News div
 	$('#news').html("");
