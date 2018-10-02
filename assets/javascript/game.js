@@ -45,6 +45,10 @@ $(".btn-start").click(function(){
 // Set Up and start game
 function setupGame() {
 
+	$(".btn-restart").hide();
+	$("#keyboard").show();
+	$('#guesses-home').show();
+
 	// Randomly choose 1 city from the cities array 
 	// and store it in the cityInPlay variable
 	cityInPlay = cities[Math.floor(Math.random() * cities.length)];
@@ -382,10 +386,6 @@ function restartGame() {
 	letterGuessed = null;
 	wins = wins;
 	losses = losses;
-
-	$(".btn-restart").hide();
-	$("#keyboard").show();
-	$('#guesses-home').show();
 
 	// reset the already guessed letters sectio
 	$('#letters-guessed').html(guessedLetters.join(' - ').toUpperCase());
