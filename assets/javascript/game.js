@@ -385,6 +385,7 @@ function restartGame() {
 
 	$(".btn-restart").hide();
 	$("#keyboard").show();
+	$('#guesses-home').show();
 
 	// reset the already guessed letters sectio
 	$('#letters-guessed').html(guessedLetters.join(' - ').toUpperCase());
