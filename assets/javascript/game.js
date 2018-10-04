@@ -30,6 +30,9 @@ var wins = 0;
 // Number of games the user lost
 var losses = 0;
 
+// call function to Setup Game
+startGame();
+
 $('#keyboard').hide();
 $('#home-score').hide();
 $(".btn-restart").hide();
@@ -41,6 +44,11 @@ $(".btn-start").click(function(){
 	$('#start-button').hide();	
 });
 
+function startGame() { 
+
+	setupGame();
+
+}
 
 // Set Up and start game
 function setupGame() {
@@ -311,7 +319,7 @@ function displayUpdate () {
 function youWin () {
 
 	// increase the Wins score by one
-	wins++;
+	wins = wins+1;
 
 	// Update the Wins score on the page
 	$('#wins').html(wins);
@@ -349,7 +357,7 @@ function youWin () {
 function youLose() {
 
 	// increase the Loss score by one
-	losses++;
+	losses = losses+1;
 
 	// Update the Loss score on the page
 	$('#losses').html(losses);
@@ -395,21 +403,16 @@ function restartGame() {
 	$('#guesses').html(guessesLeft);
 
 	// print the current number of wins
-	// $('#wins').html(wins);
+	$('#wins').html(wins);
 
 	// // print current number of losses
-	// $('#losses').html(losses);
+	$('#losses').html(losses);
 
 	// reset the News div
 	$('#news').html("");
 
 	// reset the Picture div
 	$('#picture').html("");
-	
-	// call function to Setup Game
-	setupGame();
-	
-}
 
-// call function to Setup Game
-setupGame();
+	setupGame();
+}
