@@ -30,9 +30,6 @@ var wins = 0;
 // Number of games the user lost
 var losses = 0;
 
-// call function to Setup Game
-startGame();
-
 $('#keyboard').hide();
 $('#home-score').hide();
 $(".btn-restart").hide();
@@ -44,11 +41,8 @@ $(".btn-start").click(function(){
 	$('#start-button').hide();	
 });
 
-function startGame() { 
-
-	setupGame();
-
-}
+//call function to setup game
+setupGame();
 
 // Set Up and start game
 function setupGame() {
@@ -73,6 +67,16 @@ function setupGame() {
 
 	// print number of losses
 	$('#losses').html(losses);
+
+	// call function to register keyboard letter clicks
+	keyboardClick();
+
+	// call the displayCity function to move the game on
+	displayCity();
+
+}
+
+function keyboardClick () {
 
 	// click KEYBOARD buttons
 	$('.btn-outline-primary').click(function () {
@@ -184,25 +188,6 @@ function setupGame() {
 	    	}   	
 	});
 
-	// call the displayCity function to move the game on
-	displayCity();
-
-}
-
-function callLetter () { 
-	// if the letter guessed by user is right
-	// and NOT already in the matched letters array
-	if ((cityLetters.indexOf(letterGuessed) != -1) && (matchedLetters.indexOf(letterGuessed) == -1)){ 
-
-		// call the function to update right guesses
-		correctUpdate();
-
-	} else {
-		// if not, call the function to update wrong guesses
-		wrongUpdate();
-
-	}
-
 }
 
 
@@ -227,34 +212,43 @@ function displayCity () {
 
 }
 
-// Update Wrong Guesses
-function wrongUpdate () {
+function callLetter () { 
+	// if the letter guessed by user is right
+	// and NOT already in the matched letters array
+	if ((cityLetters.indexOf(letterGuessed) != -1) && (matchedLetters.indexOf(letterGuessed) == -1)){ 
 
-	// if the letter guessed by the user
-	// is NOT in the already guessed letters array
-	// and is a wrong guess - not part of the city word
-	if ((guessedLetters.indexOf(letterGuessed) == -1) && (cityLetters.indexOf(letterGuessed) == -1)){
+		// call the function to update right guesses
+		correctUpdate();
 
-		// decrease the numer of guesses left by one
-		guessesLeft--;
+	} else {
+		// if not, call the function to update wrong guesses
+		wrongUpdate();
 
-		// put the letter in the already guessed array
-		guessedLetters.push(letterGuessed);
-
-		// print the updated no. of guesses left to page
-		$('#guesses').html(guessesLeft);
-
-		// print the already guessed letter to page
-		$('#letters-guessed').html(guessedLetters.join(' - ').toUpperCase());
 	}
 
+}
 
-	// End game if user gets the word right (win) or runs out of guesses (loss)
-	if (guessesLeft == 0) {
-			youLose();
-	 } 	else if (matchedLetters.length == cityLetters.length) {
-			youWin();
-	}
+// Update the city display on page
+function displayUpdate () {
+
+			// set the wordView to display the updates
+			var wordView = "";
+
+			// loop through the cityLetters array
+			for (var i=0; i < cityLetters.length; i++){
+
+			// if the cityLetter is in the matchedLetters array
+			if (matchedLetters.indexOf(cityLetters[i]) != -1){
+				// add the cityLetter to the wordView string
+				wordView += cityLetters[i];			
+			} else {
+				// if not, print the dashes to be filled in
+				wordView += '&nbsp;*&nbsp;';
+			}
+		}
+
+		// print the updated wordView string to the page
+		$('#city').html(wordView);
 
 }
 
@@ -291,35 +285,43 @@ function correctUpdate () {
 
 }
 
-// Update the city display on page
-function displayUpdate () {
+// Update Wrong Guesses
+function wrongUpdate () {
 
-			// set the wordView to display the updates
-			var wordView = "";
+	// if the letter guessed by the user
+	// is NOT in the already guessed letters array
+	// and is a wrong guess - not part of the city word
+	if ((guessedLetters.indexOf(letterGuessed) == -1) && (cityLetters.indexOf(letterGuessed) == -1)){
 
-			// loop through the cityLetters array
-			for (var i=0; i < cityLetters.length; i++){
+		// decrease the numer of guesses left by one
+		guessesLeft--;
 
-			// if the cityLetter is in the matchedLetters array
-			if (matchedLetters.indexOf(cityLetters[i]) != -1){
-				// add the cityLetter to the wordView string
-				wordView += cityLetters[i];			
-			} else {
-				// if not, print the dashes to be filled in
-				wordView += '&nbsp;*&nbsp;';
-			}
-		}
+		// put the letter in the already guessed array
+		guessedLetters.push(letterGuessed);
 
-		// print the updated wordView string to the page
-		$('#city').html(wordView);
+		// print the updated no. of guesses left to page
+		$('#guesses').html(guessesLeft);
+
+		// print the already guessed letter to page
+		$('#letters-guessed').html(guessedLetters.join(' - ').toUpperCase());
+	}
+
+
+	// End game if user gets the word right (win) or runs out of guesses (loss)
+	if (guessesLeft == 0) {
+			youLose();
+	 } 	else if (matchedLetters.length == cityLetters.length) {
+			youWin();
+	}
 
 }
+
 
 // Function to end game when user wins
 function youWin () {
 
 	// increase the Wins score by one
-	wins = wins+1;
+	wins++;
 
 	// Update the Wins score on the page
 	$('#wins').html(wins);
@@ -334,22 +336,12 @@ function youWin () {
 	// print the city image to the page
 	$('#picture').html('<img src="assets/images/' + cityInPlay + '.jpg" width="340" height="190">');
 
-	// Show Restart Button 
-	// $("#start-button").show();	
-	// $(".playnow-title").html("");
-	// $(".btn-start").html("Play Again");	
-	// $(".btn-start").addClass("btn-warning");	
-	
+	// Show the Restart button and call Restart function on click
 	$(".btn-restart").show();
 
 	$(".btn-restart").click(function(){
 		restartGame();
-	});
-
-	// on a press of a button, restart the game
-	// document.onkeyup = function(event) {
-	// 	restartGame();
-	// }
+	});	
 
 }
 
@@ -357,7 +349,7 @@ function youWin () {
 function youLose() {
 
 	// increase the Loss score by one
-	losses = losses+1;
+	losses++;
 
 	// Update the Loss score on the page
 	$('#losses').html(losses);
@@ -368,13 +360,13 @@ function youLose() {
 
 	// print the "YOU LOSE" phrase to the page
 	$('#news').html("<h3><font color='red'>YOU LOSE, TRY AGAIN!</font></h3>");
-
+	
+	// Show the Restart button and call Restart function on click
 	$(".btn-restart").show();
 
 	$(".btn-restart").click(function(){
 		restartGame();
 	});	
-
 }
 
 // restart the game so users can keep playing
@@ -383,9 +375,12 @@ function restartGame() {
 	// reset game variables
 	wordView = "";
 	cityInPlay = null;
-	cityLetters = [];
-	matchedLetters = [];
-	guessedLetters = [];
+	cityLetters.length = 0
+	//cityLetters = [];
+	matchedLetters.length = 0
+	//matchedLetters = [];
+	guessedLetters.length = 0
+	//guessedLetters = [];
 	guessesLeft = 10;
 	letterGuessed = null;
 	wins = wins;
@@ -414,5 +409,10 @@ function restartGame() {
 	// reset the Picture div
 	$('#picture').html("");
 
+	// call function to setup game again
 	setupGame();
+
+	console.log(wins);
+	console.log(losses);
+
 }
