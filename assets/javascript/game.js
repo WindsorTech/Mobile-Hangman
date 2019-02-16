@@ -376,11 +376,8 @@ function restartGame() {
 	wordView = "";
 	cityInPlay = null;
 	cityLetters.length = 0
-	//cityLetters = [];
 	matchedLetters.length = 0
-	//matchedLetters = [];
 	guessedLetters.length = 0
-	//guessedLetters = [];
 	guessesLeft = 10;
 	letterGuessed = null;
 	wins = wins;
