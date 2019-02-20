@@ -4,4 +4,4 @@
 
 ## Play it here: https://mobile-hangman.herokuapp.com
 
-![Mobile Hangman](https://github.com/WindsorTech/Mobile-Hangman/blob/master/assets/images/world-hangman-print.jpg?raw=true)
+![Mobile Hangman](https://github.com/WindsorTech/Mobile-Hangman/blob/master/assets/images/world-mobile-hangman-print.jpg?raw=true)
