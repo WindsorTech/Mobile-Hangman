@@ -68,8 +68,6 @@ function setupGame() {
 	// print number of losses
 	$('#losses').html(losses);
 
-	// call function to register keyboard letter clicks
-	keyboardClick();
 
 	// call the displayCity function to move the game on
 	displayCity();
@@ -190,6 +188,8 @@ function keyboardClick () {
 
 }
 
+// call function to register keyboard letter clicks
+keyboardClick();
 
 // Display random city on page with dashes to be filled in
 function displayCity () {
