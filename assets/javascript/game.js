@@ -1,9 +1,7 @@
 // Global Variables
 
 // Array with all possible cities to be chosen
-// var cities = ["beijing", "london", "moscow", "orlando", "paris", "rome", "sydney", "tokyo", "amsterdam", "athens", "barcelona", "berlin", "brasilia", "chicago", "dublin", "havana", "hiroshima", "istanbul", "liverpool", "madrid", "miami", "montreal", "prague", "seoul", "windsor"];
-
-var cities = ["paris"];
+var cities = ["beijing", "london", "moscow", "orlando", "paris", "rome", "sydney", "tokyo", "amsterdam", "athens", "barcelona", "berlin", "brasilia", "chicago", "dublin", "havana", "hiroshima", "istanbul", "liverpool", "madrid", "miami", "montreal", "prague", "seoul", "windsor"];
 
 // Variable to store the chosen city to be played in each round
 var cityInPlay = null;
@@ -52,14 +50,10 @@ function setupGame() {
 	// Randomly choose 1 city from the cities array 
 	// and store it in the cityInPlay variable
 	cityInPlay = cities[Math.floor(Math.random() * cities.length)];
-
-	console.log(cityInPlay);
 	
 	// Split the letters from chosen city
 	// and store in in the cityLetters Array
 	cityLetters = cityInPlay.split('');
-
-	console.log(cityLetters);
 	
 	// print the Wrong Guesses Left current no. to page
 	$('#guesses').html(guessesLeft);
@@ -76,9 +70,9 @@ function setupGame() {
 
 }
 
+// function to register user letter keyboard clicks
 function keyboardClick () {
 
-	// click KEYBOARD buttons
 	$('.btn-outline-primary').click(function () {
 
 	    if (this.id == 'btn-a') {
@@ -190,7 +184,7 @@ function keyboardClick () {
 
 }
 
-// call function to register keyboard letter clicks
+// call function to register letter keyboard clicks
 keyboardClick();
 
 // Display random city on page with dashes to be filled in
@@ -408,10 +402,7 @@ function restartGame() {
 	// reset the Picture div
 	$('#picture').html("");
 
-	// call function to setup game again
+	// call function to start game again
 	setupGame();
-
-	console.log(wins);
-	console.log(losses);
 
 }
