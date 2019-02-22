@@ -371,9 +371,9 @@ function restartGame() {
 	// reset game variables
 	wordView = "";
 	cityInPlay = null;
-	cityLetters.length = 0
-	matchedLetters.length = 0
-	guessedLetters.length = 0
+	cityLetters.length = 0;
+	matchedLetters.length = 0;
+	guessedLetters.length = 0;
 	guessesLeft = 10;
 	letterGuessed = null;
 	wins = wins;
