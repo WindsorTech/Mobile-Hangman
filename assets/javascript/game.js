@@ -330,7 +330,7 @@ function youWin () {
 	$('#news').html("<h3><font color='blue'>CONGRATS, YOU WIN!</font></h3>");
 
 	// print the city image to the page
-	$('#picture').html('<img src="assets/images/' + cityInPlay + '.jpg" width="95%" height="180">');
+	$('#picture').html('<img src="assets/images/' + cityInPlay + '.jpg" width="95%" height="95%">');
 
 	// Show the Restart button and call Restart function on click
 	$(".btn-restart").show();

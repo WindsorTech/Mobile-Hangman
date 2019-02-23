@@ -149,6 +149,10 @@
   width: 100%
 }
 
+.btn-start, .btn-warning { 
+  width: 80%;
+}
+
 
 
 }
