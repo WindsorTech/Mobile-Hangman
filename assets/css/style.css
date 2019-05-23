@@ -8,8 +8,8 @@
   color: #808080;
 }
 
-a {
-    color: #808080;
+.windsortech a {
+    color:inherit;
     text-decoration: none;
 }
 
