@@ -99,6 +99,10 @@
     width: 99%
 }
 
+#picture {
+  width: 90%;
+}
+
 .bg-primary {
   width: 100%
 }
