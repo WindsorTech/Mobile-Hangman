@@ -1,7 +1,11 @@
 // Global Variables
 
 // Array with all possible cities to be chosen
-var cities = ["beijing", "london", "moscow", "orlando", "paris", "rome", "sydney", "tokyo", "amsterdam", "athens", "barcelona", "berlin", "brasilia", "chicago", "dublin", "havana", "hiroshima", "istanbul", "liverpool", "madrid", "miami", "montreal", "prague", "seoul", "windsor"];
+var cities = ["beijing", "london", "moscow", "orlando", "paris", "rome", "sydney", "tokyo", "amsterdam", "athens", "barcelona", "berlin", "brasilia", "chicago", "dublin", "havana", "hiroshima", "istanbul", "liverpool", "madrid", "miami", "montreal", "prague", "seoul", "windsor", "munich", "toronto", "manchester", "melbourne", "wellington"];
+
+// munich - toronto - manchester - melbourne - wellington
+// santiago - medellin - lisbon - cairo - montevideo
+// bangkok - warsaw - brussels - venice - zurich - osaka
 
 // Variable to store the chosen city to be played in each round
 var cityInPlay = null;
