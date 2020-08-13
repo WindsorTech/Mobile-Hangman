@@ -3,9 +3,7 @@
 // Array with all possible cities to be chosen
 // var cities22 = ["beijing", "london", "moscow", "orlando", "paris", "rome", "sydney", "tokyo", "amsterdam", "athens", "barcelona", "berlin", "brasilia", "chicago", "dublin", "havana", "hiroshima", "istanbul", "liverpool", "madrid", "miami", "montreal", "prague", "seoul", "windsor", "munich", "toronto", "manchester", "melbourne", "wellington", "santiago", "medellin", "lisbon", "cairo", "montevideo", "bangkok", "warsaw", "brussels", "venice", "zurich", "osaka"];
 
-var cities21 = ["argentina", "brazil", "usa", "mexico", "canada", "colombia", "jamaica", "chile", "portugal", "spain", "france", "italy", "germany", "england", "ireland", "scotland", "belgium", "poland", "sweden", "norway", "greece", "russia", "india", "china", "japan", "zimbabwe", "egypt", "thailand", "vietnam", "australia", "iraq", "malaysia", "cuba", "morocco", "ukraine", "turkey", "indonesia", "hungary", "finland", "denmark", "croatia"];
-
-var cities = ["japan"];
+var cities = ["argentina", "brazil", "usa", "mexico", "canada", "colombia", "jamaica", "chile", "portugal", "spain", "france", "italy", "germany", "england", "ireland", "scotland", "belgium", "poland", "sweden", "norway", "greece", "russia", "india", "china", "japan", "zimbabwe", "egypt", "thailand", "vietnam", "australia", "iraq", "malaysia", "cuba", "morocco", "ukraine", "turkey", "indonesia", "hungary", "finland", "denmark", "croatia"];
 
 // Variable to store the chosen city to be played in each round
 var cityInPlay = null;
